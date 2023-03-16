@@ -16,10 +16,15 @@ function addItem(item) {
     basket.push(item);
     return true;
 }//end add Item
-console.log('add salt in basket', addItem('salt'));
 //add more items in basket
 addItem('water');
 addItem('candy');
+addItem('salt');
+
+//test output 
+console.log(`Basket is ${basket}`);
+console.log('Adding apples (expect true)', addItem('apples'));
+console.log(`Basket is now ${basket}`);
 
 console.log('--------In listItems function---------');
 
@@ -35,4 +40,16 @@ function listItems() {
 //call listItem
 listItems();
 
+console.log('--------In empty function---------');
+
+// - Create a function called `empty`. It should:
+//  - reset the `basket` to an empty array
+
+function empty(){
+    basket = []; //reset to empty array
+}
+//test the empty function
+console.log(`Basket is ${basket}`);
+empty();
+console.log(`Basket is ${basket}`);
 
